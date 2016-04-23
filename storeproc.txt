@@ -1,0 +1,36 @@
+ALTER PROCEDURE [dbo].[UPDATE_RCR_INVOICE] @monYear VARCHAR 
+
+AS
+
+SET ANSI_WARNINGS ON
+SET ANSI_NULLS ON
+
+declare @qry varchar(2000)
+
+insert into tbl_rcr_invoice
+		(Col001,Col002,Col003,Col004,Col005,Col006,Col007,Col008,Col009,Col010,Col011,Col012,Col013,Col014,Col015,
+		Col016,Col017,Col018,Col019,Col020,Col021,Col022,Col023,Col024,Col025,Col026,Col027,Col028,Col029,Col030,Col031,
+		Col032,Col033,Col034,Col035,Col036,Col037,Col038,Col039,Col040)
+		select * from openquery(pgjda,'select * from mmpgtlib.orapibk WHERE 
+		(wgldte='''+@monYear+''') and wdrsrc = ''PO''')
+
+
+
+
+CREATE PROCEDURE UPDATE_RCR_INVOICE 
+@monYear varchar(20)
+AS
+
+SET ANSI_WARNINGS ON
+SET ANSI_NULLS ON
+
+BEGIN
+
+insert into tbl_rcr_invoice
+(Col001,Col002,Col003,Col004,Col005,Col006,Col007,Col008,Col009,Col010,Col011,Col012,Col013,Col014,Col015,
+Col016,Col017,Col018,Col019,Col020,Col021,Col022,Col023,Col024,Col025,Col026,Col027,Col028,Col029,Col030,Col031,
+Col032,Col033,Col034,Col035,Col036,Col037,Col038,Col039,Col040)
+select * from openquery(pgjda,'select * from mmpgtlib.orapibk WHERE 
+(wgldte like ''%'+@monYear+''') and wdrsrc = ''PO''')
+
+END

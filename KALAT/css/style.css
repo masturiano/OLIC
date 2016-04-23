@@ -1,0 +1,72 @@
+body {
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #ffffff url(../images/main-bg.gif);
+	padding: 0;
+	margin: 0;
+}
+img {
+	border: none;
+}
+
+/*header*/
+#header{
+background-image:url(../images/header.gif);
+width:100%;
+height:100px;
+border:double;
+border-color:#000000;
+position:inherit;
+}
+
+/*footer*/
+#footer{
+background-image:url(../images/footer2.png);
+/*width:1200px;*/
+width:100%;
+height:50px;
+border:double;
+border-color:#000000;
+bottom:-1%;
+position:fixed;
+
+}
+
+#main_content{
+
+width:1200px !important;
+min-height:400px;
+margin: 0px auto;
+}
+
+/**** Added by HCA ****/
+
+/*.notloaded_inv { background:#606060 !important; }
+.notloaded_inv thead { background:#f0f0f0 !important; font-weight:bold; text-align:center; }
+.notloaded_inv tbody { background:#dedede !important; }
+*/
+
+
+.ap_x_loaded { padding:10px 20px; background:#606060 !important; }
+.ap_x_loaded h2{ color:blue !important; font-size:16px}
+.ap_x_loaded thead { background:#f0f0f0 !important; font-weight:bold; text-align:center; }
+.ap_x_loaded thead td{ padding:5px; font-size:16px; }
+.ap_x_loaded tbody { background:#dedede !important; }
+.ap_x_loaded tbody td{ font-size:12px }
+
+/******* END ********/
+
+/*GL FORM*/
+
+.GL_BalaceForm{ margin:10px 10px;}
+
+/*END*/
+
+/*hide div for dialogs*/
+
+#process_file { display:none;}	
+#process_oracle { display:none;}
+#migrate_data_dialog { display:none;}
+#progress_load { display:none;}
+
+/*end*/
+
